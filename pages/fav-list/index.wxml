@@ -1,0 +1,12 @@
+<view class="goods-container">
+    <view class="HotName">我的收藏<text></text>
+    </view>
+    <view class="goods-fav-box">
+        <view bindtap="toDetailsTap" class="goods-box" data-id="{{item.goodsId}}" wx:for="{{favList}}" wx:key="{{index}}">
+            <image class="image" lazyLoad="true" mode="widthFix" src="{{item.pic}}_m"></image>
+        </view>
+    </view>
+    <view class="no-more-goods" hidden="{{loadingMoreHidden?true:false}}">
+        <view class="text">没有任何收藏</view>
+    </view>
+</view>

@@ -1,0 +1,235 @@
+.HotName {
+    font-size: 66rpx;
+    margin-left: 20px;
+    color: #293539;
+    font-weight: 300;
+    position: relative;
+}
+
+.HotName text {
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    border: 2px solid #a78845;
+    border-radius: 50%;
+}
+
+.sec-wrap {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.sec-wrap .wuliu-box {
+    width: 100%;
+    height: 70px;
+}
+
+.sec-wrap .wuliu-box .order-number {
+    float: left;
+    height: 40px;
+    line-height: 45px;
+    font-size: 34rpx;
+    color: #293539;
+    width: 100%;
+    font-weight: 300;
+}
+
+.sec-wrap .wuliu-box .order-number text {
+    color: #a78845;
+    padding-left: 3px;
+}
+
+.sec-wrap .wuliu-box .wuliu-text {
+    float: left;
+    font-size: 30rpx;
+    color: #c5c9ca;
+    font-weight: 300;
+}
+
+.address-sec {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.address-sec .name-tel {
+    font-size: 34rpx;
+    color: #293539;
+    font-weight: 300;
+}
+
+.address-sec .text {
+    font-size: 30rpx;
+    margin-top: 5px;
+    color: #c5c9ca;
+    font-weight: 300;
+}
+
+.goods-list {
+    width: 100%;
+    border-top: 10px solid #f5f5f5;
+    margin-top: 25px;
+}
+
+.goods-list .a-goods {
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-bottom: 1px dashed #f5f5f5;
+    padding-bottom: 15px;
+}
+
+.goods-list .btn-row {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.goods-list .btn-row .pingjia {
+    font-size: 32rpx;
+    font-weight: 300;
+    color: #293539;
+    margin-bottom: 10px;
+}
+
+.goods-list .btn-row radio-group {
+    font-size: 28rpx;
+    color: #a78845;
+    font-weight: 300;
+}
+
+.btn-row .row-box .row-label {
+    font-size: 32rpx;
+    font-weight: 300;
+    color: #293539;
+}
+
+.btn-row .row-box textarea {
+    width: 95%;
+    padding: 10px;
+    font-size: 30rpx;
+    color: #293539;
+    font-weight: 300;
+    border: 1px solid #f5f5f5;
+    border-radius: 6rpx;
+    height: 50px;
+}
+
+.goods-list .a-goods .img-box {
+    float: left;
+    width: 80px;
+    height: 80px;
+    border-radius: 6rpx;
+    background-color: #f5f5f5;
+}
+
+.goods-list .a-goods .img-box .img {
+    width: 80px;
+    height: 80px;
+}
+
+.goods-list .a-goods .text-box {
+    float: left;
+    width: 73%;
+    margin-left: 10px;
+}
+
+.goods-list .a-goods .text-box .arow .goods-name {
+    font-size: 36rpx;
+    color: #293539;
+    margin-top: 3px;
+    font-weight: 300;
+}
+
+.goods-list .a-goods .text-box .arow .goods-label {
+    font-size: 30rpx;
+    margin-top: 3px;
+    color: #979d9f;
+    font-weight: 300;
+    height: 22px;
+}
+
+.goods-list .a-goods .text-box .arow .goods-price {
+    float: left;
+    font-size: 36rpx;
+    margin-top: 3px;
+    font-weight: 300;
+    color: #a78845;
+}
+
+.goods-list .a-goods .text-box .arow .goods-price text {
+    font-size: 30rpx;
+    padding-right: 3px;
+}
+
+.goods-list .a-goods .text-box .arow .goods-num {
+    float: right;
+    color: #979d9f;
+    font-size: 32rpx;
+    margin-top: 3px;
+    font-weight: 300;
+}
+
+.goods-list .a-goods .text-box .arow .goods-num text {
+    font-size: 28rpx;
+    padding-right: 3px;
+}
+
+.goods-info {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.goods-info .row-box {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+}
+
+.goods-info .row-box .row-label {
+    float: left;
+    font-size: 32rpx;
+    font-weight: 300;
+    color: #293539;
+}
+
+.goods-info .row-box .right-text {
+    float: right;
+    font-size: 32rpx;
+    color: #a78845;
+    font-weight: 300;
+}
+
+.confirm-btn-order::after {
+    border: 0;
+    border-radius: 0;
+}
+
+.confirm-btn-order {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #a78845;
+    color: #fff;
+    font-weight: 300;
+    border-radius: 0;
+}
+
+.confirm-btn::after {
+    border: 0;
+    border-radius: 0;
+}
+
+.confirm-btn {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #a78845;
+    color: #fff;
+    font-weight: 300;
+    border-radius: 0;
+    z-index: 9999;
+}

@@ -1,0 +1,53 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/menu/index",
+        "pages/shop-cart/index",
+        "pages/my/index",
+        "pages/menu-list/index",
+        "pages/goods-details/index",
+        "pages/to-pay-order/index",
+        "pages/address-add/index",
+        "pages/order-list/index",
+        "pages/select-address/index",
+        "pages/mycoupons/index",
+        "pages/fav-list/index",
+        "pages/order-details/index",
+        "pages/template-cart/template-cart"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#6e6d6b",
+        "selectedColor": "#e64340",
+        "borderStyle": "white",
+        "backgroundColor": "#fff",
+        "box-shadow": "0 0 6px 0",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "images/tabbar/like-f.png",
+                "selectedIconPath": "images/tabbar/like-o.png"
+            },
+            {
+                "pagePath": "pages/menu/index",
+                "iconPath": "images/tabbar/menu-f.png",
+                "selectedIconPath": "images/tabbar/menu-o.png"
+            },
+            {
+                "pagePath": "pages/shop-cart/index",
+                "iconPath": "images/tabbar/cart-f.png",
+                "selectedIconPath": "images/tabbar/cart-o.png"
+            },
+            {
+                "pagePath": "pages/my/index",
+                "iconPath": "images/tabbar/user-f.png",
+                "selectedIconPath": "images/tabbar/user-o.png"
+            }
+        ]
+    }
+}

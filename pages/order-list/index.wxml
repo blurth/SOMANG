@@ -1,0 +1,33 @@
+<view class="container">
+    <view class="HotName">订单列表<text></text>
+    </view>
+    <view class="status-box">
+        <view bindtap="statusTap" class="status-label {{index==currentType?'active':''}}" data-index="{{index}}" wx:for="{{statusType}}" wx:key="{{index}}">
+            {{item}}
+            <view class="{{tabClass[index]}}"></view>
+        </view>
+    </view>
+    <view class="no-order" hidden="{{orderList?true:false}}">
+        <view class="text">没有订单信息</view>
+    </view>
+    <view class="order-list" hidden="{{orderList?false:true}}">
+        <view class="a-order" wx:for="{{orderList}}" wx:key="{{index}}">
+            <view bindtap="orderDetail" class="order-date" data-id="{{item.id}}">
+                <view class="date-box">订单编号:{{item.orderNumber}}</view>
+                <view class="status {{item.status==-1||item.status==4?'':'red'}}">{{item.statusStr}}</view>
+            </view>
+            <view bindtap="orderDetail" class="goods-list-box" data-id="{{item.id}}">
+                <scroll-view class="goods-img-container" scrollX="true">
+                    <view class="img-box" wx:for="{{goodsMap[item.id]}}" wx:key="{{index}}">
+                        <image class="goods-img" src="{{item.pic}}"></image>
+                    </view>
+                </scroll-view>
+            </view>
+            <view class="price-box">
+                <view class="total-price">应付：Ұ{{item.amountReal}}</view>
+                <view bindtap="toPayTap" class="topay-btn" data-id="{{item.id}}" data-money="{{item.amountReal}}" hidden="{{item.status==0?fslse:true}}">立即支付</view>
+                <view bindtap="cancelOrderTap" class="cancel-btn" data-id="{{item.id}}" hidden="{{item.status==0?fslse:true}}">取消订单</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,107 @@
+.HotName {
+    font-size: 66rpx;
+    margin-left: 20px;
+    color: #293539;
+    font-weight: 300;
+    position: relative;
+}
+
+.HotName text {
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    border: 2px solid #a78845;
+    border-radius: 50%;
+}
+
+.address-list {
+    width: 100%;
+    background-color: #fff;
+    margin-top: 25px;
+    padding-bottom: 20px;
+    font-weight: 300;
+}
+
+.address-list .a-address {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    border-bottom: 1px dashed #f5f5f5;
+    margin-bottom: 15px;
+}
+
+.a-address .left-text {
+    width: 75%;
+    margin-left: 10px;
+    float: left;
+    height: 80px;
+}
+
+.a-address .left-text .name-tel {
+    margin-top: 12px;
+    color: #293539;
+    font-size: 38rpx;
+}
+
+.name-tel text {
+    font-size: 22rpx;
+    color: #a78845;
+    padding: 2px 5px;
+    border-radius: 6rpx;
+    border: 1px solid #a78845;
+    margin-left: 5px;
+}
+
+.a-address .left-text .address-box {
+    font-size: 30rpx;
+    color: #979d9f;
+    margin-top: 7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.right-edit {
+    float: right;
+    width: 20%;
+    height: 80px;
+    position: relative;
+}
+
+.right-edit image {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.bottom-box {
+    position: fixed;
+    width: 100%;
+    bottom: 50px;
+}
+
+.add-btn {
+    color: #fff;
+    background-color: #a78845;
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 8px;
+    border-radius: 20px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 32rpx;
+    font-weight: 300;
+    text-align: center;
+}
+
+.no-more-goods {
+    width: 100%;
+    padding-top: 280rpx;
+    text-align: center;
+    font-size: 42rpx;
+    color: #c5c9ca;
+    margin-bottom: 50rpx;
+    font-weight: 300;
+}

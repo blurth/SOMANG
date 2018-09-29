@@ -1,0 +1,46 @@
+<view class="container">
+    <image bindtap="getMoreAppTap" class="WeiLaiMoreApp" data-id="1" src="../../images/WeiLaiMoreApp.gif"></image>
+    <view class="HotName">自然乐园
+    <text></text>
+    </view>
+    <view class="HotMark">今日推荐</view>
+    <view class="HotSwiper" style="margin-top:14px">
+        <swiper autoplay="true" circular="true" duration="500" interval="6000" nextMargin="108.9rpx" previousMargin="108.9rpx">
+            <swiper-item wx:if="{{detect==0}}" wx:for="{{newcoupons}}" wx:key="{{index}}">
+                <view class="swiper-box">
+                    <image bindtap="getHotTap" data-id="{{item.businessId}}" mode="widthFix" src="{{item.picUrl}}"></image>
+                    <view class="swiper-box-info">
+                        <view class="box-info-name">祛痘面膜</view>
+                        <view class="box-info-money">
+                            <text>Ұ</text>{{item.linkUrl}}</view>
+                        <view bindtap="getCouponsTap" class="box-coupons-btn" data-id="{{item.remark}}">立即领取</view>
+                    </view>
+                </view>
+            </swiper-item>
+
+            
+            <swiper-item wx:for="{{goods}}" wx:key="{{index}}">
+                <view class="swiper-box">
+                    <image bindtap="getHotTap" data-id="{{item.id}}" mode="widthFix" src="https://syp.xayuehua.com/lun-1.png"></image>
+                    <view class="swiper-box-info">
+                        <view class="box-info-name">祛痘面膜</view>
+                        <view class="box-info-money">
+                            <text>Ұ</text>999</view>
+                        <view class="box-info-icon-box">
+                            <view class="box-info-icon">
+                                <image bindtap="addShopCar" data-id="{{item.id}}" src="../../images/Hot-cart.png"></image>
+                            </view>
+                            <view bindtap="{{favicon[goods[index].id]==0?'fav':'del'}}" class="box-info-icon" data-id="{{item.id}}">
+                                <image src="../../images/Hot-love.png" wx:if="{{favicon[goods[index].id]!=1}}"></image>
+                                <image src="../../images/Hot-love-o.png" wx:if="{{favicon[goods[index].id]==1}}"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </swiper-item>
+
+        </swiper>
+        
+        <image bindtap="getMoreAppTap" class="close" data-id="2" src="../../images/close.png"></image>
+    </view>
+</view>

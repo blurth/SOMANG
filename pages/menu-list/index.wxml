@@ -1,0 +1,15 @@
+<view class="container">
+    <view class="HotName">{{categorie.name}}<text></text>
+    </view>
+    <view class="menu-list-box">
+        <view bindtap="toDetailsTap" class="menu-list-goods" data-id="{{item.id}}" wx:for="{{goods}}" wx:key="{{index}}">
+            <image lazyLoad="true" mode="widthFix" src="{{item.pic}}"></image>
+            <view class="menu-list-goods-info">
+                <view class="goods-title">{{item.name}}</view>
+                <view class="goods-money">
+                    <text>Ұ</text>{{item.minPrice}}</view>
+                <view class="goods-price">已售{{item.numberOrders}}</view>
+            </view>
+        </view>
+    </view>
+</view>

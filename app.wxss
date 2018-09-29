@@ -1,0 +1,12 @@
+page {
+    background-color: #fff;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.wxParse-img {
+    display: block!important;
+}

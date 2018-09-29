@@ -1,0 +1,21 @@
+<view class="container">
+    <view class="HotName">我的优惠<text></text>
+    </view>
+    <view class="coupons-list">
+        <view bindtap="gitCoupon" class="coupons-item" data-id="{{item.id}}" wx:for="{{coupons}}" wx:key="{{index}}}">
+            <view class="money-left">{{item.money}}<text>元</text>
+            </view>
+            <view class="money-right">
+                <view class="money-name">{{item.name}}</view>
+                <view class="money-hold">满{{item.moneyHreshold}}元使用</view>
+            </view>
+            <view bindtap="gohome" class="money-home">去使用</view>
+            <view class="money-fooder">
+          {{item.dateEnd}}前有效
+        </view>
+        </view>
+    </view>
+    <view class="no-more-goods" hidden="{{loadingMoreHidden?true:false}}">
+        <view class="text">无可用优惠券</view>
+    </view>
+</view>

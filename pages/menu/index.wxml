@@ -1,0 +1,18 @@
+<view class="container">
+    <view class="HotName">分类<text></text>
+    </view>
+    <view class="menu-box">
+        <view class="menu-box-list" wx:for="{{categories}}" wx:key="id">
+            <view bindtap="tabClick" class="menu-list-title {{activeCategoryId==item.id?'hover':''}}" id="{{item.id}}">
+                <text class="{{activeCategoryId==item.id?'l':''}}"></text>
+        {{item.name}}
+        <text class="{{activeCategoryId==item.id?'r':''}}"></text>
+            </view>
+            <view class="menu-list-pro" id="{{item.id}}" if="{{item.level==2}}">
+                <view class="menu-list-pro" hidden="{{activeCategoryId==item.id?'':'true'}}">
+                    <image bindtap="levelClick" data-id="{{item.id}}" src="{{item.icon}}" wx:for="{{categoriesdict[categories[index].id]}}" wx:key="id"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

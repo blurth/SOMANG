@@ -1,0 +1,359 @@
+.HotName {
+    font-size: 90rpx;
+    margin-left: 20px;
+    color: #293539;
+    font-weight: 300;
+    position: relative;
+}
+
+.HotName text {
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    border: 2px solid #a78845;
+    border-radius: 50%;
+}
+
+.HotMark {
+    margin-left: 25px;
+    color: #293539;
+    font-size: 36rpx;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+.HotSwiper swiper {
+    width: 100%;
+    height: 450px;
+}
+
+.swiper-box {
+    width: 260px;
+    margin: 0 auto;
+    position: relative;
+    height: 370px;
+    box-shadow: 0px 5px 15px 0px #cfc9ca;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.swiper-box image {
+    width: 100%;
+    height: 260px;
+    background-color: #f5f5f5;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.swiper-box-info {
+    position: absolute;
+    width: 100%;
+    height: 110px;
+    top: 260px;
+    background-color: #fff;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.swiper-box-info .box-info-name {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5px;
+    font-size: 32rpx;
+    color: #293539;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.swiper-box-info .box-info-money {
+    float: left;
+    margin-top: 40px;
+    margin-left: 15px;
+    font-size: 38rpx;
+    color: #a78845;
+}
+
+.swiper-box-info .box-coupons-btn {
+    float: right;
+    margin-top: 35px;
+    background-color: #f5f5f5;
+    color: #6a7275;
+    font-size: 28rpx;
+    font-weight: 300;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 15px;
+    border-radius: 6rpx;
+}
+
+.swiper-box-info .box-info-money text {
+    font-size: 30rpx;
+    padding-right: 3px;
+}
+
+.box-info-icon-box {
+    float: right;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.box-info-icon-box .box-info-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #f5f5f5;
+    margin-left: 10px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.box-info-icon-box .box-info-icon image {
+    width: 25px;
+    height: 25px;
+    background-color: rgba(0,0,0,0);
+    margin-top: 8px;
+}
+
+.show-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.9);
+    z-index: 99999999999;
+}
+
+.show-container .show-box {
+    width: 70%;
+    margin: 0 auto;
+    height: 600rpx;
+    background-color: #fff;
+    margin-top: 25%;
+    border-radius: 10rpx;
+    box-shadow: 0px 1px 15px 0px #eee;
+}
+
+.show-logo-box {
+    text-align: center;
+    width: 80%;
+    border-bottom: 1px solid #f5f5f5;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.show-logo-box image {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.show-mall-name {
+    font-size: 32rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    color: #333;
+}
+
+.show-text-box {
+    margin-top: 20rpx;
+    margin-bottom: 40rpx;
+}
+
+.show-text-name {
+    font-size: 30rpx;
+    color: #333;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.show-text-info {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 24rpx;
+    color: #999;
+    margin-top: 10rpx;
+}
+
+.show-text-info text {
+    margin-right: 10rpx;
+    font-size: 26rpx;
+}
+
+.show-box button::after {
+    border-radius: 4rpx;
+    border: 0;
+}
+
+.show-box button {
+    width: 80%;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 30rpx;
+    background-color: #a78845;
+    color: #fff;
+}
+
+.newcoupons-hover {
+    position: fixed;
+    bottom: 20rpx;
+    right: 20rpx;
+    width: 150rpx;
+    height: 150rpx;
+    transition: all 0.6s;
+}
+
+.modal-box {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: rgba(255,255,255,0.8);
+    overflow: hidden;
+    z-index: 9999999;
+}
+
+.modal-body {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.modal-content {
+    z-index: 999;
+    margin-top: 40%;
+}
+
+.fenxiang {
+    width: 70%;
+    border-radius: 4px;
+    transition: all 0.6s;
+}
+
+.knowBtnImg {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.WeiLaiMoreApp {
+    position: fixed;
+    width: 180rpx;
+    height: 180rpx;
+    right: 50rpx;
+    top: 10rpx;
+    z-index: 999;
+}
+
+.show-more-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.99);
+    z-index: 99999999999;
+}
+
+.mask-more-app-content {
+    width: 650rpx;
+    height: 85vh;
+    margin: 0 auto;
+    margin-top: 0;
+    position: relative;
+}
+
+.mask-more-app-title {
+    color: #293539;
+    text-align: center;
+    font-size: 42rpx;
+    padding-bottom: 80rpx;
+}
+
+.mask-more-app-title image {
+    width: 80rpx;
+    height: 80rpx;
+    margin: 0 auto;
+    display: block;
+}
+
+.mask-more-app-list-box {
+    width: 100%;
+}
+
+.mask-more-app-list {
+    width: 33.33%;
+    height: 200rpx;
+    display: inline-block;
+    position: relative;
+}
+
+.mask-more-app-list navigator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.mask-more-app-list .app-image {
+    width: 130rpx;
+    height: 130rpx;
+    margin: 0 auto;
+}
+
+.mask-more-app-list .app-image image {
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 50%;
+    box-shadow: 0px 2px 10px #eee;
+}
+
+.mask-more-app-list .app-title {
+    font-size: 30rpx;
+    color: #293539;
+    text-align: center;
+    padding-top: 20rpx;
+}
+
+.mask-more-app-info {
+    color: #293539;
+    font-size: 28rpx;
+    position: absolute;
+    width: 73%;
+    bottom: 30rpx;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.mask-more-app-info .wechat {
+    font-size: 32rpx;
+    border-bottom: 2rpx solid #293539;
+    padding-bottom: 6rpx;
+    width: 160rpx;
+    margin: 0 auto;
+}
+
+.close {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -100rpx;
+    text-align: center;
+    width: 80rpx;
+    height: 80rpx;
+    border: 2rpx solid #fff;
+    border-radius: 50%;
+    line-height: 80rpx;
+    margin: 0 auto;
+}

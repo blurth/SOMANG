@@ -1,0 +1,26 @@
+<view class="container">
+    <view class="HotName">我的地址<text></text>
+    </view>
+    <view class="address-list">
+        <view class="a-address" wx:for="{{addressList}}" wx:key="{{index}}">
+            <view bindtap="selectTap" class="left-text" data-id="{{item.id}}">
+                <view class="name-tel">
+                    {{item.linkMan}}  {{item.mobile}}
+                    <text wx:if="{{item.isDefault}}">默认</text>
+                </view>
+                <view class="address-box">
+                    {{item.address}}
+                 </view>
+            </view>
+            <view bindtap="editAddess" class="right-edit" data-id="{{item.id}}">
+                <image src="../../images/Edit-icon.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="bottom-box">
+        <view bindtap="addAddess" class="add-btn">新增收货地址</view>
+    </view>
+    <view class="no-more-goods" wx:if="{{!addressList}}">
+        <view class="text">没有设置地址</view>
+    </view>
+</view>

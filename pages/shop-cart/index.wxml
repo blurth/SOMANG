@@ -1,0 +1,6 @@
+<import src="../template-cart/template-cart.wxml"></import>
+<view class="container">
+    <view class="HotName">购物车<text></text>
+    </view>
+    <template is="{{goodsList.list.length>0?'cart-goods-list':'no-goods'}}" data="{{...goodsList}}"></template>
+</view>

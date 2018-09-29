@@ -1,0 +1,65 @@
+<import src="../../wxParse/wxParse.wxml"></import>
+<view class="container">
+    <view class="my-info">
+        <open-data class="avatar" type="userAvatarUrl"></open-data>
+        <view class="my-info-name">
+            <open-data type="userNickName"></open-data>
+            <text></text>
+        </view>
+        <view class="my-info-order">
+            <view bindtap="goorderlist" class="list-icon" data-index="0">
+                <view class="{{tabClass[0]}}"></view>
+                <image src="../../images/my-icon-2.png"></image>
+                <text>未付款</text>
+            </view>
+            <view bindtap="goorderlist" class="list-icon" data-index="1">
+                <view class="{{tabClass[1]}}"></view>
+                <image src="../../images/my-icon-3.png"></image>
+                <text>待发货</text>
+            </view>
+            <view bindtap="goorderlist" class="list-icon" data-index="2">
+                <view class="{{tabClass[2]}}"></view>
+                <image src="../../images/my-icon-4.png"></image>
+                <text>待收货</text>
+            </view>
+            <view bindtap="goorderlist" class="list-icon" data-index="3">
+                <view class="{{tabClass[3]}}"></view>
+                <image src="../../images/my-icon-1.png"></image>
+                <text>待评价</text>
+            </view>
+        </view>
+    </view>
+    <view class="my-item-list">
+        <view class="my-item">
+            <text></text>
+            <navigator hoverClass="none" url="/pages/fav-list/index">收藏夹</navigator>
+            <image src="../../images/right-icon.png"></image>
+        </view>
+        <view class="my-item">
+            <text></text>
+            <navigator hoverClass="none" url="/pages/mycoupons/index">优惠券</navigator>
+            <image src="../../images/right-icon.png"></image>
+        </view>
+        <view class="my-item">
+            <text></text>
+            <navigator hoverClass="none" url="/pages/select-address/index">收货地址</navigator>
+            <image src="../../images/right-icon.png"></image>
+        </view>
+        <view class="my-item">
+            <text></text>
+            <view bindtap="getAbout" class="about" data-id="{{about.id}}">{{about.title}}</view>
+            <image src="../../images/right-icon.png"></image>
+        </view>
+    </view>
+    <view class="show-pop" hidden="{{aboutShow}}">
+        <view class="show-pop-box">
+            <image bindtap="close" class="close" src="../../images/about-icon.png"></image>
+            <view class="show-pop-title">
+                <text class="l"></text>{{about.title}}<text class="r"></text>
+            </view>
+            <view class="show-pop-text">
+                <template is="wxParse" data="{{wxParseData:article.nodes}}"></template>
+            </view>
+        </view>
+    </view>
+</view>

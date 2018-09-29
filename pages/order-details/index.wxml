@@ -1,0 +1,96 @@
+<view class="container">
+    <view class="HotName">{{orderDetail.orderInfo.statusStr}}<text></text>
+    </view>
+    <view class="sec-wrap">
+        <block wx:if="{{orderDetail.logistics}}">
+            <view class="wuliu-box" wx:if="{{orderDetail.logisticsTraces}}">
+                <view bindtap="wuliuDetailsTap" class="right-text" data-id="{{orderDetail.orderInfo.id}}">
+                    <view class="order-number">快递单号 <text>{{orderDetail.logistics.trackingNumber}}</text>
+                    </view>
+                    <block wx:if="{{orderDetail.logisticsTraces}}">
+                        <view class="wuliu-text">{{orderDetail.logisticsTraces[orderDetail.logisticsTraces.length-1].AcceptStation}}</view>
+                        <view class="wuliu-date">{{orderDetail.logisticsTraces[orderDetail.logisticsTraces.length-1].AcceptTime}}</view>
+                    </block>
+                </view>
+            </view>
+            <view class="wuliu-box" wx:else>
+                <view class="order-number">快递单号 <text>{{orderDetail.logistics.trackingNumber}}</text>
+                </view>
+                <view class="wuliu-text">暂无物流信息</view>
+            </view>
+            <view class="address-sec">
+                <view class="name-tel">{{orderDetail.logistics.linkMan}}  {{orderDetail.logistics.mobile}}</view>
+                <view class="text">{{orderDetail.logistics.address}}</view>
+            </view>
+        </block>
+    </view>
+    <view class="goods-list">
+        <form bindsubmit="submitReputation" reportSubmit="true">
+            <block wx:for="{{orderDetail.goods}}" wx:key="{{index}}">
+                <view class="a-goods">
+                    <view class="img-box">
+                        <image class="img" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="text-box">
+                        <view class="arow">
+                            <view class="goods-name">{{item.goodsName}}</view>
+                            <view class="goods-label">{{item.property}}</view>
+                            <view class="goods-price">
+                                <text>Ұ</text>{{item.amount}}</view>
+                            <view class="goods-num">
+                                <text>x</text>{{item.number}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="btn-row" wx:if="{{orderDetail.orderInfo.status==3}}">
+                    <view class="section section_gap">
+                        <view class="pingjia">评价：</view>
+                        <radio-group name="goodReputation{{index}}">
+                            <label style="margin-right:35rpx;">
+                                <radio checked value="2"></radio>好评</label>
+                            <label style="margin-right:35rpx;">
+                                <radio value="1"></radio>中评</label>
+                            <label style="margin-right:35rpx;">
+                                <radio value="0"></radio>差评</label>
+                        </radio-group>
+                    </view>
+                    <view class="row-box" style="margin-top:35rpx">
+                        <view class="row-label">备注：</view>
+                        <input name="orderGoodsId{{index}}" style="display:none;" value="{{item.id}}"></input>
+                        <textarea name="goodReputationRemark{{index}}" value="非常愉快的一次购物！"></textarea>
+                    </view>
+                </view>
+            </block>
+            <view class="btn-row-info" wx:if="{{orderDetail.orderInfo.status==3}}">
+                <button class="confirm-btn" formType="submit">提交评价</button>
+            </view>
+        </form>
+        <form bindsubmit="confirmBtnTap" reportSubmit="true">
+            <view class="btn-row" wx:if="{{orderDetail.orderInfo.status==2}}">
+                <button class="confirm-btn-order" formType="submit">确认收货</button>
+            </view>
+        </form>
+    </view>
+    <view class="peisong-way" hidden="true">
+        <view class="row-box">
+            <view class="row-label">留言</view>
+            <view class="right-text">
+                <input class="liuyan" name="remark" placeholder="如需留言请输入" type="text"></input>
+            </view>
+        </view>
+    </view>
+    <view class="goods-info">
+        <view class="row-box">
+            <view class="row-label">商品金额</view>
+            <view class="right-text">Ұ{{orderDetail.orderInfo.amount}}</view>
+        </view>
+        <view class="row-box">
+            <view class="row-label">运费</view>
+            <view class="right-text">+ Ұ{{orderDetail.orderInfo.amountLogistics}}</view>
+        </view>
+        <view class="row-box">
+            <view class="row-label">应付总额</view>
+            <view class="right-text">Ұ{{orderDetail.orderInfo.amountReal}}</view>
+        </view>
+    </view>
+</view>
